@@ -7,8 +7,6 @@ Description
 1)Стек технологий:
 
 Frontend (Владислав Петров)
--
--
 - REST API
 
 Backend (Ибрагимов Аслан)
