@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css_styles/homeApp.css"/>
+    <title>BMSTU поиск соседей</title>
+</head>
+<body style="background-color: #ddd;">
+<div style="text-align: right;"><a href="https://vk.com/aslan_ibr">Связаться с нами</a></div>
+<figure  style="text-align: center;">
+    <img src="/png_images/bmstu.png" />
+</figure>
+<div id="header">
+    <h1 style="text-align: center;">find BMSTU neighbor</h1>
+</div>
+
+<div style="text-align: center;" id="sidebar">
+    <p><input type="button" onclick="view_public()" value="&nbspПросмотр обьявлений&nbsp&nbsp&nbsp"/>
+        <input type="button" onclick="my_profile()" value="&nbspЛичный профиль&nbsp&nbsp&nbsp"/>
+        <input type="button" onclick="more_app()" value="&nbspО приложении&nbsp&nbsp&nbsp"/></p></div>
+<p id="out"></p>
+</body>
+
+<script>
+    function view_public() {
+        out.innerHTML = "Обьявления Бомонцев:";
+        let str = [{name: "Johasasn", age: 310},{name: "Johndf", age: 320},{name: "Johqweqwen", age: 304}];
+        for(let i =0; i < 3; i++) {
+            out.innerHTML += '<div>'+ str[i].name + '</div>';
+        }
+    }
+    function my_profile() {
+        out.innerHTML = "Личный профиль Бауманца";
+    }
+    function more_app() {
+        out.innerHTML = "Подробная информация о приложении";
+    }
+
+
+</script>
+
+</html>
