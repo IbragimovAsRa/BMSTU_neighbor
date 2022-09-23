@@ -7,6 +7,8 @@
 
  Frontend (Владислав Петров)
 --
+- JavaScript
+- HTML/CSS
 - REST API
 
  Backend (Ибрагимов Аслан)
