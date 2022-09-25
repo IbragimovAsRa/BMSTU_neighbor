@@ -1,7 +1,7 @@
 (function () {
   const show = document.getElementById('show');
   const ul = document.getElementById('posts');
-  const url = 'https://jsonplaceholder.typicode.com/posts?_limit=6';
+  const url = 'https://jsonplaceholder.typicode.com/posts?_limit=3';
 
   const showAdvertisments = () => {
     ul.innerHTML = '';
