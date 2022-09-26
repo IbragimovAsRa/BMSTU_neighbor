@@ -14,7 +14,8 @@
  Backend (Ибрагимов Аслан)
 --
 - Spring Boot
-- Spring Data JPA
+- Spring Data JPA (Hibernate)
+- Spring Securety
 - MySQL
 - REST API
 
