@@ -16,6 +16,7 @@
 - Spring Boot
 - Spring Data JPA (Hibernate)
 - Spring Securety
+- Spring Web (Tomcat)
 - MySQL
 - REST API
 
