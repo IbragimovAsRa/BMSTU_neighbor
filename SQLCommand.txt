@@ -1,0 +1,16 @@
+- Cоздание таблицы Posts(таблицы с обьявлениями пользователей)
+
+CREATE TABLE Posts
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(30) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    price INT NOT NULL,
+    description VARCHAR(200)
+);
+
+INSERT INTO posts(login, location, price, description)
+VALUES
+('vlad20', 'м.Бауманская', 20000, 'Ищу 1-го соседа, желательно девку'),
+('suska20', 'м.Комсомольская', 50000, 'Ищу 1-го соседа, желательно крепкого мужчину'),
+('aslan20', 'м.Красносельская', 10000, 'Ищу 1-го соседа, желательно дотер'),;

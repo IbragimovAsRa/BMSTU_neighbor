@@ -1,19 +1,23 @@
 package neighborApp.controlers;
 
-import org.apache.catalina.users.GenericRole;
+import neighborApp.dataModels.Posts;
+import neighborApp.service.PostsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class RestCon {
-    @GetMapping("/get")
-    public String rest() {
-        String str = "{\"name\":\"Иван\",\"age\":25}";
-        return str;
+    PostsServiceImpl postsServiceImpl;
+    @Autowired
+    public void setInjectedBean(PostsServiceImpl postsServiceImpl) {
+        this.postsServiceImpl = postsServiceImpl;
     }
-    @PostMapping("/validate")
-    public void resct() {
-        String str = "{\"name\":\"Иван\",\"age\":25}";
+    @GetMapping("/findAllPosts")
+    public List<Posts> getAllPosts() {
+        return postsServiceImpl.findAllPosts();
     }
 }
