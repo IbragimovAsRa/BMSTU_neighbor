@@ -1,10 +1,10 @@
-package neighborApp.dataModels;
+package neighborApp.models;
 
 
 import javax.persistence.*;
 
 @Entity
-public class Posts {
+public class Post {
     @Id
     @GeneratedValue
     private int id;
@@ -17,7 +17,7 @@ public class Posts {
 
     private String description;
 
-    public Posts(String login, String location, int price, String description) {
+    public Post(String login, String location, int price, String description) {
         super();
 
         this.login = login;
@@ -25,7 +25,7 @@ public class Posts {
         this.price = price;
         this.description = description;
     }
-    public Posts(){
+    public Post(){
         super();
 
     }

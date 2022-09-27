@@ -1,19 +1,19 @@
-package neighborApp.dataModels;
+package neighborApp.models;
 
 import javax.persistence.*;
 
 @Entity
-public class Roles {
+public class Role {
     @Id
     @GeneratedValue
 
     private long id;
     @Enumerated(EnumType.STRING)
-    private ERoles name;
+    private ERole name;
 
-    public Roles() {}
+    public Role() {}
 
-    public Roles(ERoles name) {
+    public Role(ERole name) {
         this.name = name;
     }
 
@@ -25,11 +25,11 @@ public class Roles {
         this.id = id;
     }
 
-    public ERoles getName() {
+    public ERole getName() {
         return name;
     }
 
-    public void setName(ERoles name) {
+    public void setName(ERole name) {
         this.name = name;
     }
 }

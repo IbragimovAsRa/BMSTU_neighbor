@@ -1,10 +1,8 @@
 package neighborApp.service;
 
-import neighborApp.dataModels.Posts;
+import neighborApp.models.Post;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 public interface PostsService {
 //    Posts createPosts(Posts post);
@@ -16,8 +14,8 @@ public interface PostsService {
 //    ArrayList<Posts> getAllPosts();
 //    long countPosts();
 
-    ArrayList<Posts> findAllPosts();
-    Posts findAllPostsByID(long id);
+    ArrayList<Post> findAllPosts();
+    Post findAllPostsByID(long id);
     void addPosts();
     void deleteAllData();
 

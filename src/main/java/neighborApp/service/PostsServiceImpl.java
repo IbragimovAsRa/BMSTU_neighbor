@@ -1,31 +1,28 @@
 package neighborApp.service;
 
-import neighborApp.dataModels.Posts;
-import neighborApp.repos.PostsRepo;
+import neighborApp.models.Post;
+import neighborApp.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PostsServiceImpl implements PostsService {
 
-  private PostsRepo postsRepo;
+  private PostRepository postRepository;
 
   @Autowired
-  public void setInjectedBean(PostsRepo postsRepo) {
-    this.postsRepo = postsRepo;
+  public void setInjectedBean(PostRepository postRepository) {
+    this.postRepository = postRepository;
   }
     @Override
-    public ArrayList<Posts> findAllPosts() {
-        return (ArrayList<Posts>) postsRepo.findAll();
+    public ArrayList<Post> findAllPosts() {
+        return (ArrayList<Post>) postRepository.findAll();
     }
 
     @Override
-    public Posts findAllPostsByID(long id) {
+    public Post findAllPostsByID(long id) {
         return null;
     }
 

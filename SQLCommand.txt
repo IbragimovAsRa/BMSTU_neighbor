@@ -1,6 +1,6 @@
 - Cоздание таблицы Posts(таблицы с обьявлениями пользователей)
 
-CREATE TABLE Posts
+CREATE TABLE posts
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     login VARCHAR(30) NOT NULL,
@@ -13,4 +13,11 @@ INSERT INTO posts(login, location, price, description)
 VALUES
 ('vlad20', 'м.Бауманская', 20000, 'Ищу 1-го соседа, желательно девку'),
 ('suska20', 'м.Комсомольская', 50000, 'Ищу 1-го соседа, желательно крепкого мужчину'),
-('aslan20', 'м.Красносельская', 10000, 'Ищу 1-го соседа, желательно дотер'),;
+('aslan20', 'м.Красносельская', 10000, 'Ищу 1-го соседа, желательно дотер');
+
+- Создание таблицы ролей
+CREATE TABLE roles
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL
+);

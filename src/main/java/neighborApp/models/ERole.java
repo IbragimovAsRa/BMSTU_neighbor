@@ -1,6 +1,6 @@
-package neighborApp.dataModels;
+package neighborApp.models;
 
-public enum ERoles {
+public enum ERole {
     ROLE_USER,
     ROLE_MODERATOR,
     ROLE_ADMIN
