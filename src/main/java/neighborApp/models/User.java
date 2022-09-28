@@ -7,30 +7,30 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users", uniqueConstraints =
-                {@UniqueConstraint(columnNames = "login"),
+                {@UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "mail")})
 public class User {
     @Id
     @GeneratedValue
-    private int id;
-    private String login;
+    private Long id;
+    private String username;
     private  String mail;
     private String password;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getMail() {
@@ -64,8 +64,8 @@ public class User {
 
     private Set<Role> roles = new HashSet<>();
 
-    public User(String login, String mail, String password) {
-        this.login = login;
+    public User(String username, String mail, String password) {
+        this.username = username;
         this.mail = mail;
         this.password = password;
     }

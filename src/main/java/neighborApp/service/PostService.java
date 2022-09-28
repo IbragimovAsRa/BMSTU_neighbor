@@ -4,7 +4,7 @@ import neighborApp.models.Post;
 
 import java.util.ArrayList;
 
-public interface PostsService {
+public interface PostService {
 //    Posts createPosts(Posts post);
 //    Optional<Posts> getPosts(Long id);
 //    Posts  editPosts(Posts post);

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 @Service
-public class PostsServiceImpl implements PostsService {
+public class PostServiceImpl implements PostService {
 
   private PostRepository postRepository;
 

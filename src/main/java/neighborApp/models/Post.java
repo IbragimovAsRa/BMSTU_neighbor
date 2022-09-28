@@ -9,7 +9,7 @@ public class Post {
     @GeneratedValue
     private int id;
 
-    private String login;
+    private String username;
 
     private String location;
 
@@ -17,10 +17,10 @@ public class Post {
 
     private String description;
 
-    public Post(String login, String location, int price, String description) {
+    public Post(String username, String location, int price, String description) {
         super();
 
-        this.login = login;
+        this.username = username;
         this.location = location;
         this.price = price;
         this.description = description;
@@ -30,12 +30,12 @@ public class Post {
 
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getLocation() {

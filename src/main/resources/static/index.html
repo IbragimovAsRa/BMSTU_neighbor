@@ -1,57 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Поиск соседей BMSTU (Авторизация)</title>
-    <link rel="stylesheet" type="text/css" href="/css_styles/styles.css"/>
-</head>
-<body>
-    <h1 style="font-family: Verdana;text-align: center;">BMSTU find neighbor</h1>
-    <figure  style="text-align: center;">
-    <img src="/png_images/bmstu.png" />
-    </figure>
-    <h2 style="text-align: center;">Авторизация</h2>
-    <h3 style="text-align: center;">Зарегестрируйтесь или ввойдите в приложение</h3>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <script defer src="js/main.js"></script>
+        <title>Flat Searcher</title>
+    </head>
+        <header class="header">
+            <div class="wrap-logo">
+                <a href="#logo" class="logo"></a>
+            </div>
+            <nav>
+                <a id="show" href="#show">Предложения</a>
+                <a id="my" href="#my">Мои объявления</a>
+                <a id="contacts" href="#contacts">Контакты</a>
+            </nav>
+        </header>
 
+        <main class="main">
+            <section class="section-content">
+                <div class="content__container">
+                    <h1 class="content__title">Список объявлений</h1>
+                    <ul id="posts">
+                        
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-    <p style="text-align: center;"><input id="entry" type="button"  value="Войти" /></p>
+        <footer class="footer">
+            <div class="container footer__container">
 
-    <p style="text-align: center;"><input id="regis" type="button"  value="Зарегестрироваться" /></p>
-
-
-<p  style="text-align: center;" id="demo"></p>
-
-<script>
-    function validateForm() {
-    var x = document.forms["myForm"]["username"].value;
-    var y = document.forms["myForm"]["password"].value;
-    if (x == "" || y == "") {
-        alert("Поля не могут быть пустым");
-        return false;
-
-    }
-} 
-    let str_entry ='<form name="myForm" method="get" onsubmit="return validateForm()" action="/homeApp.html">' +
-        '<p><input type="text" name="username" placeholder="Введите ваше логин"/>' +
-            '</p><p><input type="password" name="password" placeholder="Введите пароль"/>' +
-               ' </p><input type="submit" value="Войти"/>' +
-                '<button type="reset">Отмена</button></form>';
-
-    let str_regis ='<form method="post" action="DbServlet">' + 
-        '<p><input type="text" name="username" placeholder="Введите ваше логин"/>' +
-            '<p><input type="text" name="mail" placeholder="Введите вашу почту"/>' +
-            '</p><p><input type="password" name="password" placeholder= "Придумайте пароль"/>' +
-               ' </p><input type="submit" value="Зарегестрироваться"/>' +
-                '<button type="reset">Отмена</button></form>';
-
-    entry.onclick = function() {
-        document.getElementById("demo").innerHTML = str_entry;
-        
-  };
-    regis.onclick = function() {
-        regis.onclick = function() {
-        document.getElementById("demo").innerHTML = str_regis;
-  }};
-</script>
-</body>
+            </div>
+        </footer>
+    </body>
 </html>

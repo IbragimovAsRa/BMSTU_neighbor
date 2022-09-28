@@ -7,7 +7,7 @@ public class Role {
     @Id
     @GeneratedValue
 
-    private long id;
+    private Long  id;
     @Enumerated(EnumType.STRING)
     private ERole name;
 
@@ -17,7 +17,7 @@ public class Role {
         this.name = name;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
