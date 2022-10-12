@@ -25,7 +25,8 @@
 | Method name | Path | Description |
 | ----------- | ---- | ----------- |
 | POST | /users/login | Войти |
-| POST | /users/check | Проверить валидность сессии |
 | POST | /users/logout | Выйти |
+| GET | /posts | Получить все посты |
+| GET | /users/{user_id:[0-9]+} | Получить информацию о пользователе |
 
 
