@@ -20,4 +20,12 @@
 - MySQL
 - REST API
 
+### API
+
+| Method name | Path | Description |
+| ----------- | ---- | ----------- |
+| POST | /users/login | Войти |
+| POST | /users/check | Проверить валидность сессии |
+| POST | /users/logout | Выйти |
+
 
