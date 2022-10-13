@@ -27,6 +27,11 @@
 | POST | /users/login | Войти |
 | POST | /users/logout | Выйти |
 | GET | /posts | Получить все посты |
-| GET | /user/{user_id:[0-9]+} | Получить информацию о пользователе |
+| GET | /users/{user_id:[0-9]+} | Получить информацию о пользователе |
+| GET | /posts/{post_id:[0-9]+} | Получить информацию о посте |
+| POST | /posts/create/ | Разместить обьявление |
+| DELETE | /posts/delete/{post_id:[0-9]+} | Удалить обьявление |
+| POST | /users/favourites/
+ 
 
 
