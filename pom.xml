@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>net.proselyte</groupId>
-    <artifactId>jwtappdemo</artifactId>
+    <artifactId>BMSTU_neighbor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JwtAppDemo</name>
+    <name>BMSTU_neighbor</name>
     <description>JWT based spring security REST API</description>
 
     <properties>
