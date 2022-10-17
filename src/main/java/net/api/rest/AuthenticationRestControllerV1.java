@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,7 +46,7 @@ public class AuthenticationRestControllerV1 {
     }
 
     @PostMapping("login")
-    public ResponseEntity login(@RequestBody AuthenticationRequestDto requestDto) {
+    public ResponseEntity login(@RequestBody AuthenticationRequestDto requestDto, ServletResponse res) {
         try {
             String username = requestDto.getUsername();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, requestDto.getPassword()));
@@ -60,7 +62,8 @@ public class AuthenticationRestControllerV1 {
             response.put("username", username);
             response.put("token", token);
             response.put("user_id", user.getId());
-
+         //   HttpServletResponse respons = (HttpServletResponse) res;
+         //   respons.setHeader("Access-Control-Allow-Origin", "no-cors");
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid username or password");
