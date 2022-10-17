@@ -27,7 +27,7 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping(value = "/api/v1/auth/")
+@RequestMapping(value = "/auth/")
 public class AuthenticationRestControllerV1 {
 
     private final AuthenticationManager authenticationManager;
@@ -59,6 +59,7 @@ public class AuthenticationRestControllerV1 {
             Map<Object, Object> response = new HashMap<>();
             response.put("username", username);
             response.put("token", token);
+            response.put("user_id", user.getId());
 
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {

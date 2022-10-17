@@ -2,13 +2,7 @@ package net.proselyte.jwtappdemo.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 
@@ -23,6 +17,18 @@ import java.util.List;
 @Table(name = "users")
 @Data
 public class User extends BaseEntity {
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", posts=" + posts +
+                ", roles=" + roles +
+                '}';
+    }
 
     @Column(name = "username")
     private String username;
@@ -38,7 +44,9 @@ public class User extends BaseEntity {
 
     @Column(name = "password")
     private String password;
-
+    @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private List<Post> posts;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},

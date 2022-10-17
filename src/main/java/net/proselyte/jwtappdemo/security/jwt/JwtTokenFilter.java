@@ -11,13 +11,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-/**
- * JWT token filter that handles all HTTP requests to application.
- *
- * @author Eugene Suliemanov
- * @version 1.0
- */
-
 public class JwtTokenFilter extends GenericFilterBean {
 
     private JwtTokenProvider jwtTokenProvider;

@@ -23,12 +23,6 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Util class that provides methods for generation, validation, etc. of JWT token.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Component
 public class JwtTokenProvider {
