@@ -1,0 +1,60 @@
+$blue: #4361ee;
+
+.root {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+
+  &:hover {
+    border: 1px solid $blue;
+    box-shadow: 0 0 0 1px $blue;
+  }
+
+  .editButtons {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  padding: 10px 20px 20px;
+}
+
+.content {
+  margin: 30px 0 50px;
+
+  p {
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
+.indention {
+  padding-left: 40px;
+}
+
+.title {
+  font-size: 28px;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.editButtons {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
