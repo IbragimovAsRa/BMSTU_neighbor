@@ -19,6 +19,10 @@ private final PostService postService;
         this.postService = postService;
     }
 
+    /**
+     *
+     **/
+    @CrossOrigin
     @GetMapping(path = "")
     public List<Post> getAllPosts() {
         return postService.getAll();
