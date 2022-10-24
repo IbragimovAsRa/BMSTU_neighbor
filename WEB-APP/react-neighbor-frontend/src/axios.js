@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: 'https://2a2f-188-35-161-139.eu.ngrok.io', // Заменить на process.env.REACT_APP_API_URL при хостинге
+  baseURL: 'http://localhost:8075', // Заменить на process.env.REACT_APP_API_URL при хостинге
 });
 
 instance.interceptors.request.use((config) => {
