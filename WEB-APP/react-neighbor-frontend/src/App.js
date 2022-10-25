@@ -8,12 +8,12 @@ import React from "react";
 import { selectIsAuth, fetchAuthMe } from "./redux/slices/auth";
 
 const App = () => {
-  const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth);
-
-  React.useEffect(() => {
-    dispatch(fetchAuthMe(1));
-  }, []);
+  // const dispatch = useDispatch();
+  // const isAuth = useSelector(selectIsAuth);
+  //
+  // React.useEffect(() => {
+  //   dispatch(fetchAuthMe(1));
+  // }, []);
 
   return (
     <>
@@ -21,7 +21,7 @@ const App = () => {
       <Container maxWidth="lg">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/posts/:id" element={<FullPost />} />
+          <Route path="/api/posts/:id" element={<FullPost />} />
           <Route path="/add-post" element={<AddPost />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />

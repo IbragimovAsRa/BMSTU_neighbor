@@ -7,7 +7,7 @@ import { fetchPosts } from '../redux/slices/posts';
 
 export const Home = () => {
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state.auth.data);
+  // const userData = useSelector((state) => state.auth.data);
   const { posts } = useSelector((state) => state.posts);
 
   const isPostsLoading = posts.status === 'loading';
@@ -26,13 +26,15 @@ export const Home = () => {
             )
             : (
               <Post
-                id={obj._id}
+                key={index}
+                id={obj.id}
                 user_id={obj.user_id}
                 createdAt={obj.createdAt}
                 location={obj.location}
                 description={obj.description}
                 price={obj.price}
-                isEditable={userData?._id === obj.users_id}
+                // isEditable={userData?.id === obj.user_id}
+                isEditable={true}
               />
             )
           )}

@@ -11,10 +11,10 @@ export const fetchAuth = createAsyncThunk('auth/fetchAuth', async (params) => {
 //   return data;
 // });
 
-export const fetchAuthMe = createAsyncThunk('auth/fetchAuthMe', async (user_id) => {
-  const { data } = await axios.get(`/api/users/${user_id}`);
-  return data;
-});
+// export const fetchAuthMe = createAsyncThunk('auth/fetchAuthMe', async (user_id) => {
+//   const { data } = await axios.get(`/api/users/${user_id}`);
+//   return data;
+// });
 
 const initialState = {
   data: null,
@@ -45,18 +45,18 @@ const authSlice = createSlice({
     },
 
     // Получение состояния авторизованности
-    [fetchAuthMe.pending]: (state) => {
-      state.status = 'loading';
-      state.data = null;
-    },
-    [fetchAuthMe.fulfilled]: (state, action) => {
-      state.status = 'loaded';
-      state.data = action.payload;
-    },
-    [fetchAuthMe.rejected]: (state) => {
-      state.status = 'error';
-      state.data = null;
-    },
+    // [fetchAuthMe.pending]: (state) => {
+    //   state.status = 'loading';
+    //   state.data = null;
+    // },
+    // [fetchAuthMe.fulfilled]: (state, action) => {
+    //   state.status = 'loaded';
+    //   state.data = action.payload;
+    // },
+    // [fetchAuthMe.rejected]: (state) => {
+    //   state.status = 'error';
+    //   state.data = null;
+    // },
 
     // Получение регистрации
     // [fetchRegister.pending]: (state) => {

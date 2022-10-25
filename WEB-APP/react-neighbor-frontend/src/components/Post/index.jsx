@@ -22,13 +22,12 @@ export const Post = ({
 }) => {
   const dispatch = useDispatch();
 
+
   const onClickRemove = () => {
     if (window.confirm('Вы действительно хотите удалить статью?')) {
       dispatch(fetchRemovePost(id));
     }
   };
-  
-  const title = "Это тестовая статья";
 
   return (
     <div className={styles.root}>
@@ -48,8 +47,10 @@ export const Post = ({
         <UserInfo {...users_id} additionalText={createdAt} />
         <div className={styles.indention}>
           <h2 className={styles.title}>
-            {isFullPost ? title : <Link to={`/api/posts/${id}`}>{title}</Link>}
+            {isFullPost ? description : <Link to={`/api/posts/${id}`}>{description}</Link>}
           </h2>
+          <p>{price}</p>
+          <p>{location}</p>
           {children && <div className={styles.content}>{children}</div>}
         </div>
       </div>  

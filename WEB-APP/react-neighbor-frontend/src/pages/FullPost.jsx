@@ -32,17 +32,15 @@ export const FullPost = () => {
   return (
     <>
       <Post
-        id={data._id}
-        title={data.title}
-        imageUrl={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ''}
-        user={data.user}
-        createdAt={data.createdAt}
-        viewsCount={data.viewsCount}
-        commentsCount={3}
-        tags={data.tags}
         isFullPost
+        id={data.id}
+        user_id={data.user_id}
+        createdAt={data.createdAt}
+        location={data.location}
+        description={data.description}
+        price={data.price}
       >
-      <ReactMarkdown children={data.text} />
+      {/*<ReactMarkdown children={data.text} />*/}
       </Post>
       <CommentsBlock
         items={[

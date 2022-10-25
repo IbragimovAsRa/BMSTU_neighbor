@@ -8,7 +8,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
 });
 
 export const fetchRemovePost = createAsyncThunk('posts/fetchRemovePost', async (id) => {
-  axios.delete(`/api/posts/${id}`);
+  await axios.delete(`/api/posts/${id}`);
 });
 
 const initialState = {
@@ -39,7 +39,7 @@ const postsSlice = createSlice({
 
     // Удаление статьи
     [fetchRemovePost.pending]: (state, action) => {
-      state.posts.items = state.posts.items.filter(obj => obj._id !== action.meta.arg);
+      state.posts.items = state.posts.items.filter(obj => obj.id !== action.meta.arg);
     },
   },
 });
