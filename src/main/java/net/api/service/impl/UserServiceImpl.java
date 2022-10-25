@@ -1,6 +1,7 @@
 package net.api.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import net.api.dto.UserDto;
 import net.api.model.Role;
 import net.api.model.User;
 import net.api.repository.RoleRepository;
@@ -69,8 +70,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findById(Long id) {
-        User result = userRepository.findById(id).orElse(null);
+    public UserDto findById(Long id) {
+        UserDto result = fromUser(userRepository.findById(id).orElse(null));
+
 
         if (result == null) {
             log.warn("IN findById - no user found by id: {}", id);
@@ -85,5 +87,16 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         userRepository.deleteById(id);
         log.info("IN delete - user with id: {} successfully deleted");
+    }
+
+    public static UserDto fromUser(User user) {
+        UserDto userDto = new UserDto();
+        userDto.setId(user.getId());
+        userDto.setUsername(user.getUsername());
+        userDto.setFirstName(user.getFirstName());
+        userDto.setLastName(user.getLastName());
+        userDto.setEmail(user.getEmail());
+
+        return userDto;
     }
 }

@@ -1,5 +1,6 @@
 package net.api.service;
 
+import net.api.dto.UserDto;
 import net.api.model.User;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public interface UserService {
 
     User findByUsername(String username);
 
-    User findById(Long id);
+    UserDto findById(Long id);
 
     void delete(Long id);
 }

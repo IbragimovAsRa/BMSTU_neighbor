@@ -1,6 +1,7 @@
 package net.api.rest;
 
 import net.api.dto.AdminUserDto;
+import net.api.dto.UserDto;
 import net.api.model.User;
 import net.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,15 +31,13 @@ public class AdminRestControllerV1 {
     }
 
     @GetMapping(value = "users/{id}")
-    public ResponseEntity<AdminUserDto> getUserById(@PathVariable(name = "id") Long id) {
-        User user = userService.findById(id);
+    public ResponseEntity<UserDto> getUserById(@PathVariable(name = "id") Long id) {
+        UserDto user = userService.findById(id);
 
         if (user == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        AdminUserDto result = AdminUserDto.fromUser(user);
-
-        return new ResponseEntity<>(result, HttpStatus.OK);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

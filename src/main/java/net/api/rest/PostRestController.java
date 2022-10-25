@@ -7,10 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.processing.SupportedOptions;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/posts/")
+@CrossOrigin
 public class PostRestController {
 
 private final PostService postService;
@@ -22,11 +25,12 @@ private final PostService postService;
     /**
      *
      **/
-    @CrossOrigin
+
     @GetMapping(path = "")
     public List<Post> getAllPosts() {
         return postService.getAll();
     }
+
     @GetMapping(path = "{post_id}")
     public Post getPostById(@PathVariable(name = "post_id") Long post_id) {
         return postService.getById(post_id);

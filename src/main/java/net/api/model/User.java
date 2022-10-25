@@ -10,19 +10,6 @@ import java.util.List;
 @Table(name = "users")
 @Data
 public class User extends BaseEntity {
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", posts=" + posts +
-                ", roles=" + roles +
-                '}';
-    }
-
     @Column(name = "username")
     private String username;
 
